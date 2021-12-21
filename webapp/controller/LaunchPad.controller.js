@@ -30,7 +30,7 @@ function (Controller) {
                 "icon": "sap-icon://employee",
                 "type": "Monitor",
                 "title": "Employee master data",
-                "navTarget": "Billbook"
+                "navTarget": "EmployeeList"
             }, {
                 "icon": "sap-icon://customer-financial-fact-sheet",
                 "type": "Monitor",

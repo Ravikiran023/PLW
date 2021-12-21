@@ -72,9 +72,6 @@
 				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
 					<Text text="Delivery Date"/>
 				</Column>
-				<Column minScreenWidth="Tablet" hAlign="Right" demandPopin="true">
-					<Text text="Phone Number"/>
-				</Column>
 				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
 					<Text text="Quantity"/>
 				</Column>
@@ -86,6 +83,9 @@
 				</Column>
 				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
 					<Text text="Due Amt"/>
+				</Column>
+                <Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Status"/>
 				</Column>
 			</columns>
 			<items>
@@ -99,7 +99,7 @@
 						<Text text="{}"/>
 						<Text text="{}"/>
 						<Text text="{}"/>
-						<Text text="{}"/>
+						<Link text="{}"/>
 					</cells>
 				</ColumnListItem>
 			</items>

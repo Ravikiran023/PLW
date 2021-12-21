@@ -104,6 +104,13 @@
 				"target": [
 					"CreateBill"
 				]
+			},
+            {
+				"name": "EmployeeList",
+				"pattern": "EmployeeList",
+				"target": [
+					"EmployeeList"
+				]
 			}],
 			"targets": {
 				"PLWLaunchPad": {
@@ -117,6 +124,10 @@
 				"CreateBill": {
 					"viewType": "XML",
 					"viewName": "CreateBill"
+				},
+                "EmployeeList": {
+					"viewType": "XML",
+					"viewName": "EmployeeList"
 				}
 			}
 		},

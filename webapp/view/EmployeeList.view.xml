@@ -1,0 +1,94 @@
+<mvc:View controllerName="plw.controller.EmployeeList" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:fb="sap.ui.comp.filterbar">
+	<Page>
+		<customHeader>
+			<Toolbar>
+            <Button icon="sap-icon://home" press="fnNavToLaunchpad"/>
+				<ToolbarSpacer/>
+				<Title text="Employees status per bill" level="H6"/>
+				<ToolbarSpacer/>
+			</Toolbar>
+		</customHeader>
+		<fb:FilterBar reset="onReset" search="onSearchFilterbar" showRestoreButton="true" showClearButton="true" filterBarExpanded="true"
+			id="emlpoyeeFilterBar">
+			<fb:filterGroupItems>
+            <fb:FilterGroupItem groupName="PLW" name="A" label="Employee Tye" visibleInFilterBar="true">
+					<fb:control>
+						<Select items="{oMasterDataModel>/BookingType}" selectedKey="{oMasterDataModel>/sBookingType}">
+							<core:Item text="{oMasterDataModel>name}" key="{oMasterDataModel>id}"></core:Item>
+						</Select>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="PLW" name="B" label="Employee Name" visibleInFilterBar="true">
+					<fb:control>
+						<Input/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="PLW" name="C" label="From Date" visibleInFilterBar="true">
+					<fb:control>
+						<DatePicker/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="PLW" name="D" label="To Date" visibleInFilterBar="true">
+					<fb:control>
+						<DatePicker/>
+					</fb:control>
+				</fb:FilterGroupItem>
+			</fb:filterGroupItems>
+		</fb:FilterBar>
+		<Table inset="false" class="sapUiSmallMarginTop" items="{ListModel>/}">
+			<headerToolbar>
+				<OverflowToolbar>
+					<content>
+						<ToolbarSpacer/>
+						<Button text="Add New Qty" icon="sap-icon://add" press="fnCreateNewOrder"/>
+					</content>
+				</OverflowToolbar>
+			</headerToolbar>
+			<columns>
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Name"/>
+				</Column>
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Bill number"/>
+				</Column>
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Qty not started"/>
+				</Column>
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Qty in progress"/>
+				</Column>
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Qty stitched"/>
+				</Column>
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Amount payable"/>
+				</Column>
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Amount paid"/>
+				</Column>
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Balance amount"/>
+				</Column>
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Past due date"/>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem>
+					<cells>
+						<Text text="{}"/>
+						<Text text="{}"/>
+						<Text text="{}"/>
+						<Text text="{}"/>
+						<Text text="{}"/>
+						<Text text="{}"/>
+						<Text text="{}"/>
+						<Text text="{}"/>
+						<Text text="{}"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</Page>
+</mvc:View>
