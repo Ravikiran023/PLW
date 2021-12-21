@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Label text="Customer Name"/>
+	<Input value="{}"/>
+	<Label text="Phone Number"/>
+	<Input value="{}"/>
+	<Label text="Actual Delivery Date"/>
+	<DatePicker value="{}"/>
+</core:FragmentDefinition>

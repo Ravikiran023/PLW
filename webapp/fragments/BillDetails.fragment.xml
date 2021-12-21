@@ -1,0 +1,18 @@
+<core:FragmentDefinition xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Label text="Booking Type"/>
+	<Select items="{oMasterDataModel>/BookingType}" selectedKey="{}">
+		<core:Item text="{oMasterDataModel>name}" key="{oMasterDataModel>id}"></core:Item>
+	</Select>
+	<Label text="Bill Number"/>
+	<Input value="{}"/>
+	<Label text="Bill Date"/>
+	<DatePicker value="{}"/>
+	<Label text="Exp Delivery Date"/>
+	<DatePicker value="{}"/>
+	<Label text="Total Quantity"/>
+	<Input value="{}"/>
+	<Label text="Bill Amount"/>
+	<Input value="{}"/>
+	<Label text="Advance Amount"/>
+	<Input value="{}"/>
+</core:FragmentDefinition>

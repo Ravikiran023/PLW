@@ -1,0 +1,108 @@
+<mvc:View controllerName="plw.controller.Billbook" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:fb="sap.ui.comp.filterbar">
+	<Page >
+		<customHeader>
+			<Toolbar>
+            <Button icon="sap-icon://home" press="fnNavToLaunchpad"/>
+				<ToolbarSpacer/>
+				<Title text="Bill Book" level="H6"/>
+				<ToolbarSpacer/>
+			</Toolbar>
+		</customHeader>
+		<fb:FilterBar reset="onReset" search="onSearchFilterbar" showRestoreButton="true" showClearButton="true" filterBarExpanded="true"
+			id="userFilterBar">
+			<fb:filterGroupItems>
+				<fb:FilterGroupItem groupName="PLW" name="A" label="Bill Number" visibleInFilterBar="true">
+					<fb:control>
+						<Input/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="PLW" name="B" label="Bill Date" visibleInFilterBar="true">
+					<fb:control>
+						<DatePicker/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="PLW" name="C" label="Delivery Date" visibleInFilterBar="true">
+					<fb:control>
+						<DatePicker/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="PLW" name="D" label="Booking Type" visibleInFilterBar="true">
+					<fb:control>
+						<Select items="{oMasterDataModel>/BookingType}" selectedKey="{oMasterDataModel>/sBookingType}">
+							<core:Item text="{oMasterDataModel>name}" key="{oMasterDataModel>id}"></core:Item>
+						</Select>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="PLW" name="E" label="Order Status" visibleInFilterBar="true">
+					<fb:control>
+						<Select items="{oMasterDataModel>/BookingStatus}" selectedKey="{oMasterDataModel>/sBookingStatus}">
+							<core:Item text="{oMasterDataModel>name}" key="{oMasterDataModel>id}"></core:Item>
+						</Select>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="PLW" name="F" label="Tailor" visibleInFilterBar="true">
+					<fb:control>
+						<Select items="{oMasterDataModel>/Employees}" selectedKey="{oMasterDataModel>/sEmployee}">
+							<core:Item text="{oMasterDataModel>name}" key="{oMasterDataModel>id}"></core:Item>
+						</Select>
+					</fb:control>
+				</fb:FilterGroupItem>
+			</fb:filterGroupItems>
+		</fb:FilterBar>
+		<Table inset="false" class="sapUiSmallMarginTop" items="{ListModel>/}">
+			<headerToolbar>
+				<OverflowToolbar>
+					<content>
+						<ToolbarSpacer/>
+						<Button text="Add New Order" icon="sap-icon://add" press="fnCreateNewOrder"/>
+					</content>
+				</OverflowToolbar>
+			</headerToolbar>
+			<columns>
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Customer Name"/>
+				</Column>
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Bill Number"/>
+				</Column>
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Bill Date"/>
+				</Column>
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Delivery Date"/>
+				</Column>
+				<Column minScreenWidth="Tablet" hAlign="Right" demandPopin="true">
+					<Text text="Phone Number"/>
+				</Column>
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Quantity"/>
+				</Column>
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Bill Amt"/>
+				</Column>
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Advance Amt"/>
+				</Column>
+				<Column minScreenWidth="Tablet" hAlign="Center" demandPopin="true">
+					<Text text="Due Amt"/>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem>
+					<cells>
+						<Text text="{}"/>
+						<Text text="{}"/>
+						<Text text="{}"/>
+						<Text text="{}"/>
+						<Text text="{}"/>
+						<Text text="{}"/>
+						<Text text="{}"/>
+						<Text text="{}"/>
+						<Text text="{}"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</Page>
+</mvc:View>

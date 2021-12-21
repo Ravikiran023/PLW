@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Label text="Order Status"/>
+	<Select items="{oMasterDataModel>/BookingStatus}" selectedKey="">
+		<core:Item text="{oMasterDataModel>name}" key="{oMasterDataModel>id}"></core:Item>
+	</Select>
+	<Label text="Planned Start Date"/>
+	<DatePicker value="{}"/>
+	<Label text="Planned End Date"/>
+	<DatePicker value="{}"/>
+	<Label text="Ready Quantity"/>
+	<Input value="{}"/>
+	<Label text="Due Quantity"/>
+	<Input value="{}"/>
+	<Label text="Due Amtount"/>
+	<Input value="{}"/>
+	<Label text="Assigned Tailor"/>
+	<Select items="{oMasterDataModel>/Employees}" selectedKey="{}">
+		<core:Item text="{oMasterDataModel>name}" key="{oMasterDataModel>id}"></core:Item>
+	</Select>
+</core:FragmentDefinition>

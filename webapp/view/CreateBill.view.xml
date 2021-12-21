@@ -1,0 +1,35 @@
+<mvc:View controllerName="plw.controller.CreateBill" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:f="sap.f"
+	xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<Page floatingFooter="true">
+		<customHeader>
+			<Toolbar>
+				<Button icon="sap-icon://nav-back" press="fnNavToCustomerList"/>
+				<ToolbarSpacer/>
+				<Title text="Create New Order" level="H6"/>
+				<ToolbarSpacer/>
+				<Button text="Edit" icon="sap-icon://edit" type="Transparent" press="onEditActivityForm" visible="false"/>
+			</Toolbar>
+		</customHeader>
+		<content>
+			<form:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="2" labelSpanS="12"
+				adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="1"
+				singleContainerFullSize="false" class="sapSimplFormFldInvisbleClass sapMDetailPgTextFont">
+				<form:content>
+					<core:Title text="Billing Details"/>
+					<core:Fragment fragmentName="plw.fragments.BillDetails" type="XML"/>
+					<core:Title text="Order Details"/>
+					<core:Fragment fragmentName="plw.fragments.OrderDetails" type="XML"/>
+					<core:Title text="Customer Details"/>
+					<core:Fragment fragmentName="plw.fragments.CustomerDetails" type="XML"/>
+				</form:content>
+			</form:SimpleForm>
+		</content>
+		<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button type="Reject" text="Cancel" press="fnNavToCustomerList"/>
+				<Button type="Accept" text="Create Order"/>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

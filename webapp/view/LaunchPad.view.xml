@@ -1,0 +1,16 @@
+<mvc:View controllerName="plw.controller.LaunchPad" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Page showHeader="true" enableScrolling="false">
+		<customHeader>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Title text="PLW Workbench" level="H6"/>
+				<ToolbarSpacer/>
+			</Toolbar>
+		</customHeader>
+		<TileContainer tiles="{oMasterDataModel>/TileCollection}">
+			<StandardTile icon="{oMasterDataModel>icon}" type="{oMasterDataModel>type}" number="{oMasterDataModel>number}"
+				numberUnit="{oMasterDataModel>numberUnit}" title="{oMasterDataModel>title}" info="{oMasterDataModel>info}"
+				infoState="{oMasterDataModel>infoState}" press="handleTileNav"/>
+		</TileContainer>
+	</Page>
+</mvc:View>
